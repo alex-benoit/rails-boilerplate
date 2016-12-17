@@ -80,6 +80,8 @@ test:
 #
 production:
   <<: *default
-  database: scalia-app_production
-  username: scalia-app
-  password: <%= ENV['SCALIA-APP_DATABASE_PASSWORD'] %>
+  database: <%= EN['RDS_DB_NAME'] %>
+  username: <%= EN['RDS_USERNAME'] %>
+  password: <%= EN['RDS_PASSWORDs'] %>
+  host: <%= EN['RDS_HOSTNAME'] %>
+  port: <%= EN['RDS_PORT'] %>
